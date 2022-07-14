@@ -29,10 +29,8 @@ contract RiggedRoll is Ownable {
         }
 
         uint256 predictedValue = predictHash();
-        console.log("PREDICTED VALUE: ", predictedValue);
 
         if (predictedValue <= 2) {
-            console.log("Rolling the dice baby!");
             diceGame.rollTheDice{value: msg.value}();
         }
     }
